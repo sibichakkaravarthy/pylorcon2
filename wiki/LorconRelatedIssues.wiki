@@ -1,6 +1,6 @@
 #labels Lorcon,Issues
 This page contains limitations found in [http://802.11ninja.net/lorcon/ Lorcon2] itself. It is mainly a log to help Lorcon2.
 
-= Issues =
+= Lorcon2 Issues =
 
-  * _lorcon_set_channel_ cannot be called without calling first _lorcon_open_injmon_, _lorcon_open_inject_ or lorcon_opn_monitor.
+ * *_lorcon_set_channel_* cannot be called without calling first *_lorcon_open_injmon_*, *_lorcon_open_inject_* or *_lorcon_open_monitor_*.
