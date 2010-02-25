@@ -1,0 +1,36 @@
+#labels Phase-Deploy,Build,Install,Ubuntu
+= Building PyLorcon2 =
+
+= Ubuntu =
+
+This was tested on Ubuntu 9.10 Desktop
+
+Install necessary software to build lorcon2 and pylorcon2.
+
+{{{
+$ sudo aptitude install libpcap-dev libnl-dev python-dev
+...
+$ svn co http://802.11ninja.net/lorcon/svn/lorcon/trunk lorcon2
+...
+$ cd lorcon2
+$ ./configure --libdir=/usr/lib
+...
+$ make
+...
+$ sudo make install
+...
+$ svn co http://pylorcon2.googlecode.com/svn/trunk pylorcon2
+...
+$ cd pylorcon2
+...
+$ python setup.py build
+...
+$ python setup.py install
+}}}
+
+
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
