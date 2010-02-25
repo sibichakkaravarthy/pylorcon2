@@ -10,6 +10,11 @@ Install necessary software to build lorcon2 and pylorcon2.
 {{{
 $ sudo aptitude install libpcap-dev libnl-dev python-dev
 ...
+}}}
+
+Donwload Lorcon2, build it and install it.
+
+{{{
 $ svn co http://802.11ninja.net/lorcon/svn/lorcon/trunk lorcon2
 ...
 $ cd lorcon2
@@ -19,6 +24,11 @@ $ make
 ...
 $ sudo make install
 ...
+}}}
+
+Donwload PyLorcon2, build it, install it and test it.
+
+{{{
 $ svn co http://pylorcon2.googlecode.com/svn/trunk pylorcon2
 ...
 $ cd pylorcon2
@@ -26,11 +36,24 @@ $ cd pylorcon2
 $ python setup.py build
 ...
 $ python setup.py install
+...
 }}}
 
+Now we can test it.
 
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+{{{
+$ python
+Python 2.6.4 (r264:75706, Dec 7 2009, 18:45:15)
+[GCC 4.4.1] on linux
+>>>
+>>> import PyLorcon2
+>>>
+>>> PyLorcon2.get_version()
+20091101
+>>> for driver in PyLorcon2.list_drivers():
+...   print driver
+...
+('tuntap', 'Linux tuntap virtual interface drivers.')
+('mac80211', 'Linux mac80211 kernel drivers, includes all in-kernel drivers on modern systems')
+>>>
+}}}
