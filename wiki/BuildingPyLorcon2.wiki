@@ -1,5 +1,5 @@
 #labels Phase-Deploy,Build,Install,Ubuntu
-= Building PyLorcon2 =
+= Building !PyLorcon2 =
 
 = Ubuntu =
 
@@ -26,7 +26,7 @@ $ sudo make install
 ...
 }}}
 
-Donwload PyLorcon2, build it, install it and test it.
+Donwload !PyLorcon2, build it, install it and test it.
 
 {{{
 $ svn co http://pylorcon2.googlecode.com/svn/trunk pylorcon2
