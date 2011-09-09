@@ -1,23 +1,21 @@
 #labels Phase-Deploy,Build,Install,Ubuntu
 = Building !PyLorcon2 =
 
-= Ubuntu =
-
-This was tested on Ubuntu 9.10 Desktop
+= Ubuntu 11.04 =
 
 Install necessary software to build lorcon2 and pylorcon2.
 
 {{{
-$ sudo aptitude install libpcap-dev libnl-dev python-dev
+$ sudo apt-get install libpcap-dev libnl-dev python-dev
 ...
 }}}
 
 Donwload Lorcon2, build it and install it.
 
 {{{
-$ svn co http://802.11ninja.net/lorcon/svn/lorcon/trunk lorcon2
+$ svn co http://http://802.11ninja.net/svn/lorcon/tags/lorcon2-200911-rc1/ lorcon2-200911-rc1
 ...
-$ cd lorcon2
+$ cd lorcon2-200911-rc1
 $ ./configure --libdir=/usr/lib
 ...
 $ make
