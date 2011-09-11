@@ -13,7 +13,7 @@ $ sudo apt-get install libpcap-dev libnl-dev python-dev
 Donwload Lorcon2, build it and install it.
 
 {{{
-$ svn co http://http://802.11ninja.net/svn/lorcon/tags/lorcon2-200911-rc1/ lorcon2-200911-rc1
+$ svn co http://802.11ninja.net/svn/lorcon/tags/lorcon2-200911-rc1/ lorcon2-200911-rc1
 ...
 $ cd lorcon2-200911-rc1
 $ ./configure --libdir=/usr/lib
