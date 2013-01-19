@@ -1,7 +1,5 @@
 #labels Phase-Deploy,Build,Install,Ubuntu
-= Building !PyLorcon2 =
-
-= Ubuntu 11.04 =
+= Building pylorcon2 =
 
 Install necessary software to build lorcon2 and pylorcon2.
 
@@ -10,12 +8,12 @@ $ sudo apt-get install libpcap-dev libnl-dev python-dev
 ...
 }}}
 
-Donwload Lorcon2, build it and install it.
+Donwload lorcon, build it and install it.
 
 {{{
-$ svn co http://802.11ninja.net/svn/lorcon/tags/lorcon2-200911-rc1/ lorcon2-200911-rc1
+$ git clone https://code.google.com/p/lorcon/
 ...
-$ cd lorcon2-200911-rc1
+$ cd lorcon
 $ ./configure --libdir=/usr/lib
 ...
 $ make
@@ -24,7 +22,7 @@ $ sudo make install
 ...
 }}}
 
-Donwload !PyLorcon2, build it, install it and test it.
+Donwload !pylorcon2, build it, install it and test it.
 
 {{{
 $ svn co http://pylorcon2.googlecode.com/svn/trunk pylorcon2
@@ -33,7 +31,7 @@ $ cd pylorcon2
 ...
 $ python setup.py build
 ...
-$ python setup.py install
+$ sudo python setup.py install
 ...
 }}}
 
@@ -41,8 +39,9 @@ Now we can test it.
 
 {{{
 $ python
-Python 2.6.4 (r264:75706, Dec 7 2009, 18:45:15)
-[GCC 4.4.1] on linux
+Python 2.7.3 (default, Sep 26 2012, 21:53:58) 
+[GCC 4.7.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
 >>>
 >>> import PyLorcon2
 >>>
@@ -51,7 +50,8 @@ Python 2.6.4 (r264:75706, Dec 7 2009, 18:45:15)
 >>> for driver in PyLorcon2.list_drivers():
 ...   print driver
 ...
-('tuntap', 'Linux tuntap virtual interface drivers.')
+('madwifing', 'Linux madwifi-ng drivers, deprecated by ath5k and ath9k')
+('tuntap', 'Linux tuntap virtual interface drivers')
 ('mac80211', 'Linux mac80211 kernel drivers, includes all in-kernel drivers on modern systems')
 >>>
 }}}
